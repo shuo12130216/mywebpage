@@ -1,58 +1,162 @@
-<details>
-<summary>点此展开 index.html 内容</summary>
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>我们的单位 | 简约官网</title>
-  <link rel="stylesheet" href="style.css" />
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腰痛的解决办法及延伸分析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',
+                        secondary: '#7B8794',
+                        light: '#F5F7FA',
+                        dark: '#2D3748'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .section-card {
+                transition: all 0.3s ease;
+            }
+            .section-card:hover {
+                transform: translateY(-2px);
+                background-color: #f0f4f8;
+            }
+        }
+    </style>
 </head>
-<body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">单位名称</h1>
-      <p class="tagline">我们用现代设计推动专业服务</p >
-    </div>
-  </header>
+<body class="bg-white text-dark">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">shuo</div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menuBtn" class="lg:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+            
+            <!-- 桌面端菜单 -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="#section1" class="text-secondary hover:text-primary transition-colors">第一部分</a>
+                <a href="#section2" class="text-secondary hover:text-primary transition-colors">第二部分</a>
+            </nav>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#section1" class="py-2 text-secondary hover:text-primary transition-colors">第一部分</a>
+                <a href="#section2" class="py-2 text-secondary hover:text-primary transition-colors">第二部分</a>
+            </div>
+        </div>
+    </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>关于我们</h2>
-      <p>
-        我们是一个专注于高效解决方案的小团队，致力于为客户带来优质、可持续的服务体验。
-      </p >
-    </div>
-  </section>
+    <main class="container mx-auto px-4 py-8">
+        <!-- 标题区域 -->
+        <section class="mb-16 text-center">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-6 text-balance">腰痛的解决办法及延伸分析</h1>
+            <p class="text-secondary text-lg max-w-3xl mx-auto">请在此处添加简短介绍文字，概述整个内容的主题和目的</p>
+            <div class="mt-8 h-1 w-24 bg-primary mx-auto rounded-full"></div>
+        </section>
 
-  <section class="services">
-    <div class="container">
-      <h2>我们的服务</h2>
-      <ul class="service-list">
-        <li>
-          <h3>服务一</h3>
-          <p>描述或优势文字。</p >
-        </li>
-        <li>
-          <h3>服务二</h3>
-          <p>描述或优势文字。</p >
-        </li>
-      </ul>
-    </div>
-  </section>
+        <!-- 第一部分 -->
+        <section id="section1" class="mb-20">
+            <div class="flex items-center mb-6">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                    <i class="fa fa-file-text-o text-primary"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">第一部分</h2>
+            </div>
+            <div class="section-card bg-light rounded-xl p-6 min-h-[200px] cursor-pointer">
+                <!-- 此处可输入第一部分内容 -->
+                <p class="text-secondary italic">请在此处输入第一部分的内容...</p>
+            </div>
+        </section>
 
-  <section class="contact">
-    <div class="container">
-      <h2>联系我们</h2>
-      <p>邮箱：example@example.com</p >
-      <p>微信 / 电话：可填写</p >
-    </div>
-  </section>
+        <!-- 第二部分 -->
+        <section id="section2" class="mb-20">
+            <div class="flex items-center mb-6">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                    <i class="fa fa-file-text-o text-primary"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold">第二部分</h2>
+            </div>
+            <div class="section-card bg-light rounded-xl p-6 min-h-[200px] cursor-pointer">
+                <!-- 此处可输入第二部分内容 -->
+                <p class="text-secondary italic">请在此处输入第二部分的内容...</p>
+            </div>
+        </section>
+    </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 单位名称. 保留所有权利。</p >
-    </div>
-  </footer>
-</body>
-</html></details>
+    <!-- 页脚 -->
+    <footer class="bg-light py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-xl font-bold text-primary mb-2">shuo</div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-6 pt-6 text-center text-secondary text-sm">
+                <p>© shuo. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单（如果打开）
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // 部分点击效果 - 可根据需要扩展功能
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // 这里可以添加点击后的具体操作
+                // 例如：展开更多内容、跳转到详情页等
+                console.log('点击了' + this.closest('section').id);
+            });
+        });
+    </script>
+
+
+    </body></html>
